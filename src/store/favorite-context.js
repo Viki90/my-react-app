@@ -20,8 +20,8 @@ function FavoritesContextProvider(props) {
         });
     }
 
-    function itemIsFavoriteHandler() {
-
+    function itemIsFavoriteHandler(meetupId) {
+        return userFavorites.some(meetup => meetup.id === meetupId);
     }
 
     const context = {
